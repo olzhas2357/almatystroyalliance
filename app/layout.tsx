@@ -5,6 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Footer from "@/components/footer"
 import WhatsAppButton from "@/components/whatsapp-button"
+import {GoogleTagManager} from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] })
 
@@ -22,11 +23,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
+    <GoogleTagManager gtmId="GTM-KJPBZX2X"/>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJPBZX2X"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+          </noscript>
           {children}
-          <Footer />
-          <WhatsAppButton />
+          <Footer/>
+          <WhatsAppButton/>
+          <InstagramButton/>
         </ThemeProvider>
       </body>
     </html>
@@ -36,3 +43,4 @@ export default function RootLayout({
 
 
 import './globals.css'
+import InstagramButton from "@/components/insta-button";

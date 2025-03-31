@@ -24,10 +24,10 @@ export default function HomePage() {
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                       Хотите узнать стоимость строительства?
                   </h2>
-                  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl text-red-500">
+                  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl ">
                       Оставьте заявку, и мы рассчитаем смету бесплатно!
                   </p>
-                  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl text-yellow-500">
+                  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl ">
                       Ответьте на несколько вопросов, и мы свяжемся с вами для обсуждения строительства
                   </p>
               </div>

@@ -28,7 +28,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <noscript>
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJPBZX2X"
-                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                    height="0" width="0" style={{display: "none", visibility: "hidden"}}></iframe>
           </noscript>
           {children}
           <Footer/>

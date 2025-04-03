@@ -28,7 +28,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2" />
-                <span>г. Алматы, ул. Елеубеков 16A</span>
+                <span>г. Алматы, ул. Елеубеков 16</span>
               </li>
             </ul>
           </div>

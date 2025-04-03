@@ -5,6 +5,7 @@ const projects = [
   { src: "/0340 (1).mp4", thumbnail: "/0340.jpg", title: "Проект 1" },
   { src: "/0330 (1).mp4", thumbnail: "/0330.jpg", title: "Проект 2" },
   { src: "/0320(1).mp4", thumbnail: "/0320.jpg", title: "Проект 3" },
+  { src: "/0350.mp4", thumbnail: "/0340.jpg", title: "Проект 4" },
 ];
 
 const VideoGallery = () => {

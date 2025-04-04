@@ -21,32 +21,33 @@ export default function ContactPage() {
     phone: "",
     message: "",
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  // const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      toast({
-        title: "Сообщение отправлено",
-        description: "Мы свяжемся с вами в ближайшее время",
-      })
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      })
-    }, 1500)
-  }
+    // Номер WhatsApp (замените на ваш)
+    const phoneNumber = "77785555016"; // Без +, только цифры
+
+    // Формируем сообщение
+    const message = `Здравствуйте! Меня зовут ${formData.name}.
+Email: ${formData.email}
+Телефон: ${formData.phone}
+Сообщение: ${formData.message}`;
+
+    // Кодируем сообщение для URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Создаём ссылку WhatsApp
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Открываем WhatsApp
+    window.open(whatsappUrl, "_blank");
+  };
 
   return (
     <main className="flex min-h-screen flex-col">
@@ -77,19 +78,13 @@ export default function ContactPage() {
                   <p className="text-muted-foreground">+7 (778) 555-50-16</p>
                 </div>
               </div>
-              {/*<div className="flex items-start gap-3">*/}
-              {/*  <Mail className="h-5 w-5 text-primary mt-1" />*/}
-              {/*  <div>*/}
-              {/*    <h3 className="font-medium">Email</h3>*/}
-              {/*    <p className="text-muted-foreground">info@almatystroy.kz</p>*/}
-              {/*  </div>*/}
-              {/*</div>*/}
+
             </div>
           </div>
           <Card>
             <CardHeader>
               <CardTitle>Отправить сообщение</CardTitle>
-              <CardDescription>Заполните форму ниже, и мы свяжемся с вами в ближайшее время</CardDescription>
+              <CardDescription>Заполните форму ниже, и мы свяжемся с вами в WhatsApp</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -97,27 +92,20 @@ export default function ContactPage() {
                   <Label htmlFor="name">Имя</Label>
                   <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />
-                </div>
+                {/*<div className="space-y-2">*/}
+                {/*  <Label htmlFor="email">Email</Label>*/}
+                {/*  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />*/}
+                {/*</div>*/}
                 <div className="space-y-2">
                   <Label htmlFor="phone">Телефон</Label>
                   <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message">Сообщение</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={4}
-                    required
-                  />
+                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={4} required />
                 </div>
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Отправка..." : "Отправить"}
+                <Button type="submit" className="w-full bg-green-500 hover:bg-green-600 text-white">
+                  Отправить в WhatsApp
                 </Button>
               </form>
             </CardContent>

@@ -22,24 +22,27 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru">
-    <GoogleTagManager gtmId="GTM-KJPBZX2X"/>
+      <html lang="ru">
+      <head>
+        <link rel="icon" href="/logo6.jpg" type="image/png"/>
+        <title>Almaty Alliance Stroy</title>
+      </head>
+      <GoogleTagManager gtmId="GTM-KJPBZX2X"/>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJPBZX2X"
-                    height="0" width="0" style={{display: "none", visibility: "hidden"}}></iframe>
-          </noscript>
-          {children}
-          <Footer/>
-          <WhatsAppButton/>
-          <InstagramButton/>
-        </ThemeProvider>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <noscript>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJPBZX2X"
+                  height="0" width="0" style={{display: "none", visibility: "hidden"}}></iframe>
+        </noscript>
+        {children}
+        <Footer/>
+        <WhatsAppButton/>
+        <InstagramButton/>
+      </ThemeProvider>
       </body>
-    </html>
+      </html>
   )
 }
-
 
 
 import './globals.css'

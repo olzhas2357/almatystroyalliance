@@ -29,19 +29,19 @@ export default function HeroSection() {
                 Работаем по договору, соблюдаем сроки, подбираем материалы и проекты.
               </p>
             </div>
-            {/*<div className="flex flex-col gap-2 min-[400px]:flex-row">*/}
-            {/*  <Link href="/calculator">*/}
-            {/*    <Button size="lg" className="h-12 px-8">*/}
-            {/*      <FileText className="mr-2 h-5 w-5"/>*/}
-            {/*      Пройти опрос*/}
-            {/*    </Button>*/}
-            {/*  </Link>*/}
-            {/*  <Link href="#services">*/}
-            {/*    <Button variant="outline" size="lg" className="h-12 px-8">*/}
-            {/*      Наши услуги*/}
-            {/*    </Button>*/}
-            {/*  </Link>*/}
-            {/*</div>*/}
+            <div className="flex flex-col gap-2 min-[400px]:flex-row">
+              {/*<Link href="/calculator">*/}
+              {/*  <Button size="lg" className="h-12 px-8">*/}
+              {/*    <FileText className="mr-2 h-5 w-5"/>*/}
+              {/*    Пройти опрос*/}
+              {/*  </Button>*/}
+              {/*</Link>*/}
+              <Link href="#services">
+                <Button variant="outline" size="lg" className="h-12 px-8">
+                  Наши услуги
+                </Button>
+              </Link>
+            </div>
           </div>
           <div className="flex items-center justify-center">
             <Image

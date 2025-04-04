@@ -11,7 +11,7 @@ const Navbar = () => {
                 </div>
                 <div className="hidden md:flex space-x-12"> {/* Увеличил расстояние между ссылками */}
                     <Link
-                        href="/"
+                        href="#about"
                         className="relative flex items-center space-x-2 text-gray-700 hover:text-gray-900 transition duration-300"
                     >
                         <svg
@@ -26,7 +26,7 @@ const Navbar = () => {
                     </Link>
 
                     <Link
-                        href="/"
+                        href="/contact"
                         className="relative flex items-center space-x-2 text-gray-700 hover:text-gray-900 transition duration-300"
                     >
                         <svg
@@ -41,7 +41,7 @@ const Navbar = () => {
                     </Link>
 
                     <Link
-                        href="/"
+                        href="#projects"
                         className="relative flex items-center space-x-2 text-gray-700 hover:text-gray-900 transition duration-300"
                     >
                         <svg
@@ -56,7 +56,7 @@ const Navbar = () => {
                     </Link>
 
                     <Link
-                        href="/"
+                        href="#testimonials"
                         className="relative flex items-center space-x-2 text-gray-700 hover:text-gray-900 transition duration-300"
                     >
                         <svg

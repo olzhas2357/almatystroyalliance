@@ -3,6 +3,7 @@ import { Calculator } from "lucide-react"
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
 import { ClipboardList, FileText, ListChecks, FormInput, MessageSquare } from "lucide-react";
+import {white} from "next/dist/lib/picocolors";
 
 export default function HeroSection() {
   return (

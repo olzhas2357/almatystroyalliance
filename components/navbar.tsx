@@ -108,7 +108,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="text-lg font-semibold text-gray-900">
-                    <a href="tel:+77785555016" className="hover:text-blue-500 transition">87785555016</a>
+                    <a href="tel:+77785555016" className="hover:text-yellow-500 transition">87785555016</a>
                 </div>
             </div>
         </nav>

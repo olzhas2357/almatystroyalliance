@@ -23,12 +23,8 @@ export default function Footer() {
                 <span>+7 778 5555 016</span>
               </li>
               <li className="flex items-center">
-                <Instagram className="h-4 w-4 mr-2" />
-                <span>@almatyalliancestroy</span>
-              </li>
-              <li className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2" />
-                <span>г. Алматы, ул. Елеубеков 16</span>
+                <span><i className="fas fa-map-marker-alt"></i>г. Алматы, ул. Елебеков 16</span>
               </li>
             </ul>
           </div>

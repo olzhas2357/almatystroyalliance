@@ -66,11 +66,11 @@ export default function HomePage() {
           {/*<GallerySection/>*/}
           <TestimonialsSection/>
           <div className="map-container">
-              <h3>Как нас найти:</h3>
+              {/*<h3>Как нас найти:</h3>*/}
               <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1646.1652647967644!2d76.96268688436716!3d43.228026265799656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f0779242177%3A0x3dff17f3c2ca9509!2sAlem%20Technologies%20Office!5e1!3m2!1sen!2skz!4v1744139344616!5m2!1sen!2skz"
                   width="100%"
-                  height="400"
+                  height="500"
                   style={{border: 0}}
                   allowFullScreen=""
                   loading="lazy"
